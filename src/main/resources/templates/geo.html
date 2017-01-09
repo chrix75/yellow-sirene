@@ -5,11 +5,11 @@
     <title>Régions / Départements / Villes</title>
 
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/bootstrap-slider.min.css">
 
     <style>
-        .selection-link {
-            padding-top: 6px;
+        .region-label {
+            margin-left: 0;
+            margin-right: 10px;
         }
     </style>
 
@@ -23,33 +23,76 @@
             <!-- Sélection des régions -->
             <div class="form-group type">
                 <label class="col-sm-2 control-label">Régions</label>
-                <div class="col-sm-offset-2 col-sm-10">
-                    <ul>
-                        <li>Ile de France</li>
-                    </ul>
+                <div class="col-sm-offset-2 col-sm-10 regions">
+                    <label class="checkbox-inline">
+                        <input type="checkbox" id="alsaceReg" value="Alsace">Alsace
+                    </label>
+                    <label class="checkbox-inline">
+                        <input type="checkbox" id="aquitaineReg" value="Aquitaine">Aquitaine
+                    </label>
+                    <label class="checkbox-inline">
+                        <input type="checkbox" id="auvergneReg" value="Auvergne">Auvergne
+                    </label>
+                    <label class="checkbox-inline">
+                        <input type="checkbox" id="basseNormandieReg" value="Basse-Normandie">Basse-Normandie
+                    </label>
+                    <label class="checkbox-inline">
+                        <input type="checkbox" id="bourgogneReg" value="Bourgogne">Bourgogne
+                    </label>
+                    <label class="checkbox-inline">
+                        <input type="checkbox" id="bretagneReg" value="Bretagne">Bretagne
+                    </label>
+                    <label class="checkbox-inline">
+                        <input type="checkbox" id="centreReg" value="Centre">Centre
+                    </label>
+                    <label class="checkbox-inline">
+                        <input type="checkbox" id="champagneArdenneReg" value="Champagne-Ardenne">Champagne-Ardenne
+                    </label>
+                    <label class="checkbox-inline">
+                        <input type="checkbox" id="corseReg" value="Corse">Corse
+                    </label>
+                    <label class="checkbox-inline">
+                        <input type="checkbox" id="francheComtéReg" value="Franche-Comté">Franche-Comté
+                    </label>
+                    <label class="checkbox-inline region-label">
+                        <input class="region-label" type="checkbox" id="hauteNormandieReg" value="Haute-Normandie">Haute-Normandie
+                    </label>
+                    <label class="checkbox-inline">
+                        <input type="checkbox" id="idfReg" value="Île-de-France">Île-de-France
+                    </label>
+                    <label class="checkbox-inline">
+                        <input type="checkbox" id="languedocRoussillonReg" value="Languedoc-Roussillon">Languedoc-Roussillon
+                    </label>
+                    <label class="checkbox-inline">
+                        <input type="checkbox" id="limousinReg" value="Limousin">Limousin
+                    </label>
+                    <label class="checkbox-inline">
+                        <input type="checkbox" id="lorraineReg" value="Lorraine">Lorraine
+                    </label>
+                    <label class="checkbox-inline">
+                        <input type="checkbox" id="midiPyrénéesReg" value="Midi-Pyrénées">Midi-Pyrénées
+                    </label>
+                    <label class="checkbox-inline">
+                        <input type="checkbox" id="nordPasDeCalaisReg" value="Nord-Pas-de-Calais">Nord-Pas-de-Calais
+                    </label>
+                    <label class="checkbox-inline">
+                        <input type="checkbox" id="paysDeLaLoireReg" value="Pays de la Loire">Pays de la Loire
+                    </label>
+                    <label class="checkbox-inline">
+                        <input type="checkbox" id="picardieReg" value="Picardie">Picardie
+                    </label>
+                    <label class="checkbox-inline">
+                        <input type="checkbox" id="poitouCharentesReg" value="Poitou-Charentes">Poitou-Charentes
+                    </label>
+                    <label class="checkbox-inline">
+                        <input type="checkbox" id="pacaReg" value="Provence-Alpes-Côte d'Azur">Provence-Alpes-Côte
+                        d'Azur
+                    </label>
+                    <label class="checkbox-inline">
+                        <input type="checkbox" id="rhoneAlpesReg" value="Rhône-Alpes">Rhône-Alpes
+                    </label>
                 </div>
             </div>
-
-            <!-- Régions disponibles -->
-            <div class="col-sm-offset-2 col-xs-10 col-sm-10">
-                <div class="input-group">
-                    <div class="input-group-addon ">Filtre</div>
-                    <input v-model="filterValue" type="text" class="form-control" id="filterValue"
-                           placeholder="Région">
-                    <span class="input-group-btn">
-                        <button class="btn btn-link" type="button">Masquer</button>
-                    </span>
-                </div>
-
-            </div>
-            <div class="col-sm-offset-2 col-sm-6">
-                <ul class="list-group">
-                    <li class="list-group-item" v-for="reg in availableRegions" @click="">
-                        <td>{{ reg.name }}</td>
-                    </li>
-                </ul>
-            </div>
-
 
             <!-- Sélection des départements -->
             <div class="form-group type">
@@ -94,42 +137,43 @@
             </div>
         </form>
     </div>
+</div>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/bootstrap-slider.min.js"></script>
-    <script src="https://unpkg.com/vue/dist/vue.js"></script>
-    <script src="https://cdn.jsdelivr.net/lodash/4.17.3/lodash.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
+<script src="https://cdn.jsdelivr.net/lodash/4.17.3/lodash.min.js"></script>
 
-    <script>
-        var citiesView = new Vue({
-            el: '#geo',
-            data: {
-                regionsTableVisible: true,
-                regionsTableVisibilityLabel: "Masquer",
-                regions: [
-                    {name: "Ile de France"},
-                    {name: "Bretagne"},
-                    {name: "PACA"}
-                ],
-                departementsTableVisible: true,
-                departementsTableVisibilityLabel: "Masquer",
-                departements: [
-                    {name: "Seine Saint Denis"},
-                    {name: "Yonne"},
-                    {name: "Paris"}
-                ]
+<script>
+    var citiesView = new Vue({
+        el: '#geo',
+        data: {
+            regionsTableVisible: true,
+            regionsTableVisibilityLabel: "Masquer",
+            regions: [
+                {name: "Ile de France"},
+                {name: "Bretagne"},
+                {name: "PACA"}
+            ],
+            departementsTableVisible: true,
+            departementsTableVisibilityLabel: "Masquer",
+            departements: [
+                {name: "Seine Saint Denis"},
+                {name: "Yonne"},
+                {name: "Paris"}
+            ]
+        },
+        computed: {
+            availableRegions: function () {
+                return this.regions;
             },
-            computed: {
-                availableRegions: function () {
-                    return this.regions;
-                },
-                availableDepartements: function () {
-                    return this.departements;
-                }
+            availableDepartements: function () {
+                return this.departements;
             }
-        });
+        }
+    });
 
-    </script>
+</script>
+
 </body>
 </html>

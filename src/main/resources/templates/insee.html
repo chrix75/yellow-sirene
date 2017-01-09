@@ -68,26 +68,28 @@
 
             <div class="form-group">
                 <div class="col-sm-offset-2 col-xs-12 col-sm-12">
-                    <button onclick="window.location='search.html'" type="button" class="btn btn-primary">Valider</button>
+                    <button onclick="window.location='search.html'" type="button" class="btn btn-primary">Valider
+                    </button>
                     <button type="button" class="btn btn-link">Annuler</button>
                 </div>
             </div>
         </form>
     </div>
+</div>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/bootstrap-slider.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/bootstrap-slider.min.js"></script>
 
-    <script>
-        $("#ex3").slider({});
+<script>
+    $("#ex3").slider({});
 
-        $("#ex2").slider({})
-            .on('slideStop', function (ev) {
-                console.log($("#ex2").slider('getValue'));
-            });
+    $("#ex2").slider({})
+        .on('slideStop', function (ev) {
+            console.log($("#ex2").slider('getValue'));
+        });
 
 
-    </script>
+</script>
 </body>
 </html>
