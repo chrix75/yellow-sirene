@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Critères INSEE</title>
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-slider.min.css">
+
+    <style>
+        .selection-link {
+            padding-top: 6px;
+        }
+    </style>
+
+</head>
+<body>
+<div class="container-fluid">
+    <div th:replace="nav :: navbar" class="row"></div>
+
+    <div class="row">
+        <form class="form-horizontal col-md-12">
+            <div class="form-group">
+                <label for="address" class="col-sm-2 control-label">Adresse</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="address" placeholder="Adresse, Code postal, Ville">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="zoneGeo" class="col-sm-2 control-label">Régions / Départements / Villes</label>
+                <div class="col-sm-10 selection-link">
+                    <a href="/geo" id="zoneGeo">Sélectionnez</a>
+                </div>
+            </div>
+
+
+            <div class="form-group">
+                <label for="phone" class="col-sm-2 control-label">Téléphone/Fax</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="phone" placeholder="0X XX XX XX XX ou +33X XX XX XX XX">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="naf" class="col-sm-2 control-label">Activités</label>
+                <div class="col-sm-10 selection-link">
+                    <a href="#" id="naf">Sélectionnez</a>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="cj" class="col-sm-2 control-label">Catégories juridiques</label>
+                <div class="col-sm-10 selection-link">
+                    <a href="cj.html" id="cj">Sélectionnez</a>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox">Seulement les établissements sièges
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-xs-12 col-sm-12">
+                    <button onclick="window.location='search.html'" type="button" class="btn btn-primary">Valider</button>
+                    <button type="button" class="btn btn-link">Annuler</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap-slider.min.js"></script>
+
+    <script>
+        $("#ex3").slider({});
+
+        $("#ex2").slider({})
+            .on('slideStop', function (ev) {
+                console.log($("#ex2").slider('getValue'));
+            });
+
+
+    </script>
+</body>
+</html>

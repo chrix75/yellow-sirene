@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Régions / Départements / Villes</title>
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-slider.min.css">
+
+    <style>
+        .selection-link {
+            padding-top: 6px;
+        }
+    </style>
+
+</head>
+<body>
+<div class="container-fluid">
+    <div th:replace="nav :: navbar" class="row"></div>
+
+    <div id="geo" class="row">
+        <form class="form-horizontal col-md-12">
+            <!-- Sélection des régions -->
+            <div class="form-group type">
+                <label class="col-sm-2 control-label">Régions</label>
+                <div class="col-sm-offset-2 col-sm-10">
+                    <ul>
+                        <li>Ile de France</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Régions disponibles -->
+            <div class="col-sm-offset-2 col-xs-10 col-sm-10">
+                <div class="input-group">
+                    <div class="input-group-addon ">Filtre</div>
+                    <input v-model="filterValue" type="text" class="form-control" id="filterValue"
+                           placeholder="Région">
+                    <span class="input-group-btn">
+                        <button class="btn btn-link" type="button">Masquer</button>
+                    </span>
+                </div>
+
+            </div>
+            <div class="col-sm-offset-2 col-sm-6">
+                <ul class="list-group">
+                    <li class="list-group-item" v-for="reg in availableRegions" @click="">
+                        <td>{{ reg.name }}</td>
+                    </li>
+                </ul>
+            </div>
+
+
+            <!-- Sélection des départements -->
+            <div class="form-group type">
+                <label class="col-sm-2 control-label">Départements</label>
+                <div class="col-sm-offset-2 col-sm-10">
+                    <ul>
+                        <li>Hauts de Seine</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Départements disponibles -->
+            <div class="col-sm-offset-2 col-sm-10">
+                <span style="font-weight: bold">Départements</span>
+                <button type="button" @click="toggleDepartementsTableVisibility()" class="btn btn-link">{{
+                    departementsTableVisibilityLabel }}
+                </button>
+            </div>
+            <div v-if="departementsTableVisible" class="col-sm-offset-2 col-sm-10">
+                <div class="input-group">
+                    <div class="input-group-addon ">Filtre</div>
+                    <input v-model="filterValue" type="text" class="form-control" id="filterValue"
+                           placeholder="Code ou nom du département">
+
+                </div>
+                <table class="table table-condensed table-hover table-selection">
+                    <tbody>
+                    <tr v-for="dpt in availableDepartements" @click="">
+                        <td>{{ dpt.name }}</td>
+                    </tr>
+
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-xs-12 col-sm-12">
+                    <button onclick="window.location='search.html'" type="button" class="btn btn-primary">Valider
+                    </button>
+                    <button type="button" class="btn btn-link">Annuler</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap-slider.min.js"></script>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/lodash/4.17.3/lodash.min.js"></script>
+
+    <script>
+        var citiesView = new Vue({
+            el: '#geo',
+            data: {
+                regionsTableVisible: true,
+                regionsTableVisibilityLabel: "Masquer",
+                regions: [
+                    {name: "Ile de France"},
+                    {name: "Bretagne"},
+                    {name: "PACA"}
+                ],
+                departementsTableVisible: true,
+                departementsTableVisibilityLabel: "Masquer",
+                departements: [
+                    {name: "Seine Saint Denis"},
+                    {name: "Yonne"},
+                    {name: "Paris"}
+                ]
+            },
+            computed: {
+                availableRegions: function () {
+                    return this.regions;
+                },
+                availableDepartements: function () {
+                    return this.departements;
+                }
+            }
+        });
+
+    </script>
+</body>
+</html>
