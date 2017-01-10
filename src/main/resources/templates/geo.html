@@ -27,41 +27,41 @@
                                 <tbody>
                                 <tr>
                                     <td>Alsace</td>
-                                    <td style="width: 5%"><input type="checkbox" @click="toggleRegion(alsace)" v-model="alsace.selected"></td>
+                                    <td style="width: 5%"><input type="checkbox" @click="toggleRegion(regions.alsace)" v-model="regions.alsace.selected"></td>
                                 </tr>
                                 <tr>
                                     <td>Aquitaine</td>
-                                    <td style="width: 5%"><input type="checkbox" @click="toggleRegion(aquitaine)" v-model="aquitaine.selected"></td>
+                                    <td style="width: 5%"><input type="checkbox" @click="toggleRegion(regions.aquitaine)" v-model="regions.aquitaine.selected"></td>
                                 </tr>
                                 <tr>
                                     <td>Auvergne</td>
-                                    <td style="width: 5%"><input type="checkbox" @click="toggleRegion(auvergne)" v-model="auvergne.selected"></td>
+                                    <td style="width: 5%"><input type="checkbox" @click="toggleRegion(regions.auvergne)" v-model="regions.auvergne.selected"></td>
                                 </tr>
                                 <tr>
                                     <td>Auvergne-Rhône-Alpes</td>
-                                    <td style="width: 5%"><input type="checkbox" @click="toggleRegion(auvergneRhoneAlpes)" v-model="auvergneRhoneAlpes.selected">
+                                    <td style="width: 5%"><input type="checkbox" @click="toggleRegion(regions.auvergneRhoneAlpes)" v-model="regions.auvergneRhoneAlpes.selected">
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>Basse-Normandie</td>
-                                    <td style="width: 5%"><input type="checkbox" @click="toggleRegion(basseNormandie)" v-model="basseNormandie.selected"></td>
+                                    <td style="width: 5%"><input type="checkbox" @click="toggleRegion(regions.basseNormandie)" v-model="regions.basseNormandie.selected"></td>
                                 </tr>
                                 <tr>
                                     <td>Bourgogne</td>
-                                    <td style="width: 5%"><input type="checkbox" @click="toggleRegion(bourgogne)" v-model="bourgogne.selected"></td>
+                                    <td style="width: 5%"><input type="checkbox" @click="toggleRegion(regions.bourgogne)" v-model="regions.bourgogne.selected"></td>
                                 </tr>
                                 <tr>
                                     <td>Bourgogne-Franche-Comté</td>
-                                    <td style="width: 5%"><input type="checkbox" @click="toggleRegion(bougogneFrancheComte)" v-model="bougogneFrancheComte.selected">
+                                    <td style="width: 5%"><input type="checkbox" @click="toggleRegion(regions.bougogneFrancheComte)" v-model="regions.bougogneFrancheComte.selected">
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>Bretagne</td>
-                                    <td style="width: 5%"><input type="checkbox" @click="toggleRegion(bretagne)" v-model="bretagne.selected"></td>
+                                    <td style="width: 5%"><input type="checkbox" @click="toggleRegion(regions.bretagne)" v-model="regions.bretagne.selected"></td>
                                 </tr>
                                 <tr>
                                     <td>Centre-Val de Loire</td>
-                                    <td style="width: 5%"><input type="checkbox" @click="toggleRegion(centreValDeLoire)" v-model="centreValDeLoire.selected">
+                                    <td style="width: 5%"><input type="checkbox" @click="toggleRegion(regions.centreValDeLoire)" v-model="regions.centreValDeLoire.selected">
                                     </td>
                                 </tr>
                                 </tbody>
@@ -72,45 +72,45 @@
                                 <tbody>
                                 <tr>
                                     <td>Champagne-Ardenne</td>
-                                    <td style="width: 5%"><input type="checkbox" @click="toggleRegion(champagneArdennes)" v-model="champagneArdennes.selected">
+                                    <td style="width: 5%"><input type="checkbox" @click="toggleRegion(regions.champagneArdennes)" v-model="regions.champagneArdennes.selected">
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>Corse</td>
-                                    <td style="width: 5%"><input type="checkbox" @click="toggleRegion(corse)" v-model="corse.selected"></td>
+                                    <td style="width: 5%"><input type="checkbox" @click="toggleRegion(regions.corse)" v-model="regions.corse.selected"></td>
                                 </tr>
                                 <tr>
                                     <td>Franche-Comté</td>
-                                    <td style="width: 5%"><input type="checkbox" @click="toggleRegion(francheComte)" v-model="francheComte.selected"></td>
+                                    <td style="width: 5%"><input type="checkbox" @click="toggleRegion(regions.francheComte)" v-model="regions.francheComte.selected"></td>
                                 </tr>
                                 <tr>
                                     <td>Grand Est</td>
-                                    <td style="width: 5%"><input type="checkbox" @click="toggleRegion(grandEst)" v-model="grandEst.selected"></td>
+                                    <td style="width: 5%"><input type="checkbox" @click="toggleRegion(regions.grandEst)" v-model="regions.grandEst.selected"></td>
                                 </tr>
                                 <tr>
                                     <td>Haute-Normandie</td>
-                                    <td style="width: 5%"><input type="checkbox" @click="toggleRegion(hauteNormandie)" v-model="hauteNormandie.selected"></td>
+                                    <td style="width: 5%"><input type="checkbox" @click="toggleRegion(regions.hauteNormandie)" v-model="regions.hauteNormandie.selected"></td>
                                 </tr>
                                 <tr>
                                     <td>Hauts-de-France</td>
-                                    <td style="width: 5%"><input type="checkbox" @click="toggleRegion(hautsDeFrance)" v-model="hautsDeFrance.selected"></td>
+                                    <td style="width: 5%"><input type="checkbox" @click="toggleRegion(regions.hautsDeFrance)" v-model="regions.hautsDeFrance.selected"></td>
                                 </tr>
                                 <tr>
                                     <td>Ile-de-France</td>
-                                    <td style="width: 5%"><input type="checkbox" @click="toggleRegion(idf)" v-model="idf.selected"></td>
+                                    <td style="width: 5%"><input type="checkbox" @click="toggleRegion(regions.idf)" v-model="regions.idf.selected"></td>
                                 </tr>
                                 <tr>
                                     <td>Languedoc-Roussillon</td>
-                                    <td style="width: 5%"><input type="checkbox" @click="toggleRegion(languedocRoussillon)" v-model="languedocRoussillon.selected">
+                                    <td style="width: 5%"><input type="checkbox" @click="toggleRegion(regions.languedocRoussillon)" v-model="regions.languedocRoussillon.selected">
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>Limousin</td>
-                                    <td style="width: 5%"><input type="checkbox" @click="toggleRegion(limousin)" v-model="limousin.selected"></td>
+                                    <td style="width: 5%"><input type="checkbox" @click="toggleRegion(regions.limousin)" v-model="regions.limousin.selected"></td>
                                 </tr>
                                 <tr>
                                     <td>Lorraine</td>
-                                    <td style="width: 5%"><input type="checkbox" @click="toggleRegion(lorraine)" v-model="lorraine.selected"></td>
+                                    <td style="width: 5%"><input type="checkbox" @click="toggleRegion(regions.lorraine)" v-model="regions.lorraine.selected"></td>
                                 </tr>
                                 </tbody>
                             </table>
@@ -121,44 +121,44 @@
                                 <tbody>
                                 <tr>
                                     <td>Midi-Pyrénées</td>
-                                    <td style="width: 5%"><input type="checkbox" @click="toggleRegion(midiPyrenees)" v-model="midiPyrenees.selected"></td>
+                                    <td style="width: 5%"><input type="checkbox" @click="toggleRegion(regions.midiPyrenees)" v-model="regions.midiPyrenees.selected"></td>
                                 </tr>
                                 <tr>
                                     <td>Nord-Pas-de-Calais</td>
-                                    <td style="width: 5%"><input type="checkbox" @click="toggleRegion(nordPasDeCalais)" v-model="nordPasDeCalais.selected"></td>
+                                    <td style="width: 5%"><input type="checkbox" @click="toggleRegion(regions.nordPasDeCalais)" v-model="regions.nordPasDeCalais.selected"></td>
                                 </tr>
                                 <tr>
                                     <td>Normandie</td>
-                                    <td style="width: 5%"><input type="checkbox" @click="toggleRegion(normandie)" v-model="normandie.selected"></td>
+                                    <td style="width: 5%"><input type="checkbox" @click="toggleRegion(regions.normandie)" v-model="regions.normandie.selected"></td>
                                 </tr>
                                 <tr>
                                     <td>Nouvelle-Aquitaine</td>
-                                    <td style="width: 5%"><input type="checkbox" @click="toggleRegion(nouvelleAquitaine)" v-model="nouvelleAquitaine.selected">
+                                    <td style="width: 5%"><input type="checkbox" @click="toggleRegion(regions.nouvelleAquitaine)" v-model="regions.nouvelleAquitaine.selected">
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>Occitanie</td>
-                                    <td style="width: 5%"><input type="checkbox" @click="toggleRegion(occitanie)" v-model="occitanie.selected"></td>
+                                    <td style="width: 5%"><input type="checkbox" @click="toggleRegion(regions.occitanie)" v-model="regions.occitanie.selected"></td>
                                 </tr>
                                 <tr>
                                     <td>Pays de la Loire</td>
-                                    <td style="width: 5%"><input type="checkbox" @click="toggleRegion(paysDeLaLoire)" v-model="paysDeLaLoire.selected"></td>
+                                    <td style="width: 5%"><input type="checkbox" @click="toggleRegion(regions.paysDeLaLoire)" v-model="regions.paysDeLaLoire.selected"></td>
                                 </tr>
                                 <tr>
                                     <td>Picardie</td>
-                                    <td style="width: 5%"><input type="checkbox" @click="toggleRegion(picardie)" v-model="picardie.selected"></td>
+                                    <td style="width: 5%"><input type="checkbox" @click="toggleRegion(regions.picardie)" v-model="regions.picardie.selected"></td>
                                 </tr>
                                 <tr>
                                     <td>Poitou-Charentes</td>
-                                    <td style="width: 5%"><input type="checkbox" @click="toggleRegion(poitouCharentes)" v-model="poitouCharentes.selected"></td>
+                                    <td style="width: 5%"><input type="checkbox" @click="toggleRegion(regions.poitouCharentes)" v-model="regions.poitouCharentes.selected"></td>
                                 </tr>
                                 <tr>
                                     <td>Provence-Alpes-Côte d'Azur</td>
-                                    <td style="width: 5%"><input type="checkbox" @click="toggleRegion(paca)" v-model="paca.selected"></td>
+                                    <td style="width: 5%"><input type="checkbox" @click="toggleRegion(regions.paca)" v-model="regions.paca.selected"></td>
                                 </tr>
                                 <tr>
                                     <td>Rhône-Alpes</td>
-                                    <td style="width: 5%"><input type="checkbox" @click="toggleRegion(rhoneAlpes)" v-model="rhoneAlpes.selected"></td>
+                                    <td style="width: 5%"><input type="checkbox" @click="toggleRegion(regions.rhoneAlpes)" v-model="regions.rhoneAlpes.selected"></td>
                                 </tr>
                                 </tbody>
                             </table>
@@ -352,45 +352,45 @@
                                 <tbody>
                                 <tr>
                                     <td>Champagne-Ardenne</td>
-                                    <td style="width: 5%"><input type="checkbox" v-model="champagneArdennes.selected">
+                                    <td style="width: 5%"><input type="checkbox" v-model="regions.champagneArdennes.selected">
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>Corse</td>
-                                    <td style="width: 5%"><input type="checkbox" v-model="corse.selected"></td>
+                                    <td style="width: 5%"><input type="checkbox" v-model="regions.corse.selected"></td>
                                 </tr>
                                 <tr>
                                     <td>Franche-Comté</td>
-                                    <td style="width: 5%"><input type="checkbox" v-model="francheComte.selected"></td>
+                                    <td style="width: 5%"><input type="checkbox" v-model="regions.francheComte.selected"></td>
                                 </tr>
                                 <tr>
                                     <td>Grand Est</td>
-                                    <td style="width: 5%"><input type="checkbox" v-model="grandEst.selected"></td>
+                                    <td style="width: 5%"><input type="checkbox" v-model="regions.grandEst.selected"></td>
                                 </tr>
                                 <tr>
                                     <td>Haute-Normandie</td>
-                                    <td style="width: 5%"><input type="checkbox" v-model="hauteNormandie.selected"></td>
+                                    <td style="width: 5%"><input type="checkbox" v-model="regions.hauteNormandie.selected"></td>
                                 </tr>
                                 <tr>
                                     <td>Hauts-de-France</td>
-                                    <td style="width: 5%"><input type="checkbox" v-model="hautsDeFrance.selected"></td>
+                                    <td style="width: 5%"><input type="checkbox" v-model="regions.hautsDeFrance.selected"></td>
                                 </tr>
                                 <tr>
                                     <td>Ile-de-France</td>
-                                    <td style="width: 5%"><input type="checkbox" v-model="idf.selected"></td>
+                                    <td style="width: 5%"><input type="checkbox" v-model="regions.idf.selected"></td>
                                 </tr>
                                 <tr>
                                     <td>Languedoc-Roussillon</td>
-                                    <td style="width: 5%"><input type="checkbox" v-model="languedocRoussillon.selected">
+                                    <td style="width: 5%"><input type="checkbox" v-model="regions.languedocRoussillon.selected">
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>Limousin</td>
-                                    <td style="width: 5%"><input type="checkbox" v-model="limousin.selected"></td>
+                                    <td style="width: 5%"><input type="checkbox" v-model="regions.limousin.selected"></td>
                                 </tr>
                                 <tr>
                                     <td>Lorraine</td>
-                                    <td style="width: 5%"><input type="checkbox" v-model="lorraine.selected"></td>
+                                    <td style="width: 5%"><input type="checkbox" v-model="regions.lorraine.selected"></td>
                                 </tr>
                                 </tbody>
                             </table>
@@ -401,44 +401,44 @@
                                 <tbody>
                                 <tr>
                                     <td>Midi-Pyrénées</td>
-                                    <td style="width: 5%"><input type="checkbox" v-model="midiPyrenees.selected"></td>
+                                    <td style="width: 5%"><input type="checkbox" v-model="regions.midiPyrenees.selected"></td>
                                 </tr>
                                 <tr>
                                     <td>Nord-Pas-de-Calais</td>
-                                    <td style="width: 5%"><input type="checkbox" v-model="nordPasDeCalais.selected"></td>
+                                    <td style="width: 5%"><input type="checkbox" v-model="regions.nordPasDeCalais.selected"></td>
                                 </tr>
                                 <tr>
                                     <td>Normandie</td>
-                                    <td style="width: 5%"><input type="checkbox" v-model="normandie.selected"></td>
+                                    <td style="width: 5%"><input type="checkbox" v-model="regions.normandie.selected"></td>
                                 </tr>
                                 <tr>
                                     <td>Nouvelle-Aquitaine</td>
-                                    <td style="width: 5%"><input type="checkbox" v-model="nouvelleAquitaine.selected">
+                                    <td style="width: 5%"><input type="checkbox" v-model="regions.nouvelleAquitaine.selected">
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>Occitanie</td>
-                                    <td style="width: 5%"><input type="checkbox" v-model="occitanie.selected"></td>
+                                    <td style="width: 5%"><input type="checkbox" v-model="regions.occitanie.selected"></td>
                                 </tr>
                                 <tr>
                                     <td>Pays de la Loire</td>
-                                    <td style="width: 5%"><input type="checkbox" v-model="paysDeLaLoire.selected"></td>
+                                    <td style="width: 5%"><input type="checkbox" v-model="regions.paysDeLaLoire.selected"></td>
                                 </tr>
                                 <tr>
                                     <td>Picardie</td>
-                                    <td style="width: 5%"><input type="checkbox" v-model="picardie.selected"></td>
+                                    <td style="width: 5%"><input type="checkbox" v-model="regions.picardie.selected"></td>
                                 </tr>
                                 <tr>
                                     <td>Poitou-Charentes</td>
-                                    <td style="width: 5%"><input type="checkbox" v-model="poitouCharentes.selected"></td>
+                                    <td style="width: 5%"><input type="checkbox" v-model="regions.poitouCharentes.selected"></td>
                                 </tr>
                                 <tr>
                                     <td>Provence-Alpes-Côte d'Azur</td>
-                                    <td style="width: 5%"><input type="checkbox" v-model="paca.selected"></td>
+                                    <td style="width: 5%"><input type="checkbox" v-model="regions.paca.selected"></td>
                                 </tr>
                                 <tr>
                                     <td>Rhône-Alpes</td>
-                                    <td style="width: 5%"><input type="checkbox" v-model="rhoneAlpes.selected"></td>
+                                    <td style="width: 5%"><input type="checkbox" v-model="regions.rhoneAlpes.selected"></td>
                                 </tr>
                                 </tbody>
                             </table>
