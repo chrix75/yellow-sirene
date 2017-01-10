@@ -5,6 +5,8 @@
 var regionsView = new Vue({
     el: '#regions',
     data: {
+        visible: false,
+        action: 'Afficher',
         alsaceSelected: false,
         aquitaineSelected: false,
         auvergneSelected: false,
@@ -169,6 +171,17 @@ var regionsView = new Vue({
         rhoneAlpesSelected: function (checked) {
             if (!checked) {
                 this.auvergneRhoneAlpesSelected = false;
+            }
+        }
+    },
+    methods: {
+        toggleDisplay: function() {
+            this.visible = !this.visible;
+
+            if (this.visible) {
+                this.action = 'Masquer';
+            } else {
+                this.action = 'Afficher';
             }
         }
     }
