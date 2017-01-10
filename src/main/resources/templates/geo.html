@@ -23,74 +23,157 @@
             <!-- Sélection des régions -->
             <div class="form-group type">
                 <label class="col-sm-2 control-label">Régions</label>
-                <div class="col-sm-offset-2 col-sm-10 regions">
-                    <label class="checkbox-inline">
-                        <input type="checkbox" id="alsaceReg" value="Alsace">Alsace
-                    </label>
-                    <label class="checkbox-inline">
-                        <input type="checkbox" id="aquitaineReg" value="Aquitaine">Aquitaine
-                    </label>
-                    <label class="checkbox-inline">
-                        <input type="checkbox" id="auvergneReg" value="Auvergne">Auvergne
-                    </label>
-                    <label class="checkbox-inline">
-                        <input type="checkbox" id="basseNormandieReg" value="Basse-Normandie">Basse-Normandie
-                    </label>
-                    <label class="checkbox-inline">
-                        <input type="checkbox" id="bourgogneReg" value="Bourgogne">Bourgogne
-                    </label>
-                    <label class="checkbox-inline">
-                        <input type="checkbox" id="bretagneReg" value="Bretagne">Bretagne
-                    </label>
-                    <label class="checkbox-inline">
-                        <input type="checkbox" id="centreReg" value="Centre">Centre
-                    </label>
-                    <label class="checkbox-inline">
-                        <input type="checkbox" id="champagneArdenneReg" value="Champagne-Ardenne">Champagne-Ardenne
-                    </label>
-                    <label class="checkbox-inline">
-                        <input type="checkbox" id="corseReg" value="Corse">Corse
-                    </label>
-                    <label class="checkbox-inline">
-                        <input type="checkbox" id="francheComtéReg" value="Franche-Comté">Franche-Comté
-                    </label>
-                    <label class="checkbox-inline region-label">
-                        <input class="region-label" type="checkbox" id="hauteNormandieReg" value="Haute-Normandie">Haute-Normandie
-                    </label>
-                    <label class="checkbox-inline">
-                        <input type="checkbox" id="idfReg" value="Île-de-France">Île-de-France
-                    </label>
-                    <label class="checkbox-inline">
-                        <input type="checkbox" id="languedocRoussillonReg" value="Languedoc-Roussillon">Languedoc-Roussillon
-                    </label>
-                    <label class="checkbox-inline">
-                        <input type="checkbox" id="limousinReg" value="Limousin">Limousin
-                    </label>
-                    <label class="checkbox-inline">
-                        <input type="checkbox" id="lorraineReg" value="Lorraine">Lorraine
-                    </label>
-                    <label class="checkbox-inline">
-                        <input type="checkbox" id="midiPyrénéesReg" value="Midi-Pyrénées">Midi-Pyrénées
-                    </label>
-                    <label class="checkbox-inline">
-                        <input type="checkbox" id="nordPasDeCalaisReg" value="Nord-Pas-de-Calais">Nord-Pas-de-Calais
-                    </label>
-                    <label class="checkbox-inline">
-                        <input type="checkbox" id="paysDeLaLoireReg" value="Pays de la Loire">Pays de la Loire
-                    </label>
-                    <label class="checkbox-inline">
-                        <input type="checkbox" id="picardieReg" value="Picardie">Picardie
-                    </label>
-                    <label class="checkbox-inline">
-                        <input type="checkbox" id="poitouCharentesReg" value="Poitou-Charentes">Poitou-Charentes
-                    </label>
-                    <label class="checkbox-inline">
-                        <input type="checkbox" id="pacaReg" value="Provence-Alpes-Côte d'Azur">Provence-Alpes-Côte
-                        d'Azur
-                    </label>
-                    <label class="checkbox-inline">
-                        <input type="checkbox" id="rhoneAlpesReg" value="Rhône-Alpes">Rhône-Alpes
-                    </label>
+                <div class="col-sm-10 regions">
+                    <div class="row">
+                        <button type="button" class="btn btn-link">Afficher la liste des régions</button>
+                    </div>
+                    <div id="regions" class="row">
+                        <div class="col-sm-3">
+                            <table class="table">
+                                <tbody>
+                                <tr>
+                                    <td>Alsace</td>
+                                    <td style="width: 5%"><input type="checkbox" v-model="alsaceSelected"></td>
+                                </tr>
+                                <tr>
+                                    <td>Aquitaine</td>
+                                    <td style="width: 5%"><input type="checkbox" v-model="aquitaineSelected"></td>
+                                </tr>
+                                <tr>
+                                    <td>Auvergne</td>
+                                    <td style="width: 5%"><input type="checkbox" v-model="auvergneSelected"></td>
+                                </tr>
+                                <tr>
+                                    <td>Auvergne-Rhône-Alpes</td>
+                                    <td style="width: 5%"><input type="checkbox" v-model="auvergneRhoneAlpesSelected">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Basse-Normandie</td>
+                                    <td style="width: 5%"><input type="checkbox" v-model="basseNormandieSelected"></td>
+                                </tr>
+                                <tr>
+                                    <td>Bourgogne</td>
+                                    <td style="width: 5%"><input type="checkbox" v-model="bourgogneSelected"></td>
+                                </tr>
+                                <tr>
+                                    <td>Bourgogne-Franche-Comté</td>
+                                    <td style="width: 5%"><input type="checkbox" v-model="bougogneFrancheComteSelected">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Bretagne</td>
+                                    <td style="width: 5%"><input type="checkbox" v-model="bretagneSelected"></td>
+                                </tr>
+                                <tr>
+                                    <td>Centre</td>
+                                    <td style="width: 5%"><input type="checkbox" v-model="centreSelected"></td>
+                                </tr>
+                                <tr>
+                                    <td>Centre-Val de Loire</td>
+                                    <td style="width: 5%"><input type="checkbox" v-model="centreValDeLoireSelected">
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="col-sm-3">
+                            <table class="table">
+                                <tbody>
+                                <tr>
+                                    <td>Champagne-Ardenne</td>
+                                    <td style="width: 5%"><input type="checkbox" v-model="champagneArdennesSelected">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Corse</td>
+                                    <td style="width: 5%"><input type="checkbox" v-model="corseSelected"></td>
+                                </tr>
+                                <tr>
+                                    <td>Franche-Comté</td>
+                                    <td style="width: 5%"><input type="checkbox" v-model="francheComteSelected"></td>
+                                </tr>
+                                <tr>
+                                    <td>Grand Est</td>
+                                    <td style="width: 5%"><input type="checkbox" v-model="grandEstSelected"></td>
+                                </tr>
+                                <tr>
+                                    <td>Haute-Normandie</td>
+                                    <td style="width: 5%"><input type="checkbox" v-model="hauteNormandieSelected"></td>
+                                </tr>
+                                <tr>
+                                    <td>Hauts-de-France</td>
+                                    <td style="width: 5%"><input type="checkbox" v-model="hautsDeFranceSelected"></td>
+                                </tr>
+                                <tr>
+                                    <td>Ile-de-France</td>
+                                    <td style="width: 5%"><input type="checkbox" v-model="idfSelected"></td>
+                                </tr>
+                                <tr>
+                                    <td>Languedoc-Roussillon</td>
+                                    <td style="width: 5%"><input type="checkbox" v-model="languedocRoussillonSelected">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Limousin</td>
+                                    <td style="width: 5%"><input type="checkbox" v-model="limousinSelected"></td>
+                                </tr>
+                                <tr>
+                                    <td>Lorraine</td>
+                                    <td style="width: 5%"><input type="checkbox" v-model="lorraineSelected"></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="col-sm-3">
+                            <table class="table">
+                                <tbody>
+                                <tr>
+                                    <td>Midi-Pyrénées</td>
+                                    <td style="width: 5%"><input type="checkbox" v-model="midiPyreneesSelected"></td>
+                                </tr>
+                                <tr>
+                                    <td>Nord-Pas-de-Calais</td>
+                                    <td style="width: 5%"><input type="checkbox" v-model="nordPasDeCalaisSelected"></td>
+                                </tr>
+                                <tr>
+                                    <td>Normandie</td>
+                                    <td style="width: 5%"><input type="checkbox" v-model="normandieSelected"></td>
+                                </tr>
+                                <tr>
+                                    <td>Nouvelle-Aquitaine</td>
+                                    <td style="width: 5%"><input type="checkbox" v-model="nouvelleAquitaineSelected">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Occitanie</td>
+                                    <td style="width: 5%"><input type="checkbox" v-model="occitanieSelected"></td>
+                                </tr>
+                                <tr>
+                                    <td>Pays de la Loire</td>
+                                    <td style="width: 5%"><input type="checkbox" v-model="paysDeLaLoireSelected"></td>
+                                </tr>
+                                <tr>
+                                    <td>Picardie</td>
+                                    <td style="width: 5%"><input type="checkbox" v-model="picardieSelected"></td>
+                                </tr>
+                                <tr>
+                                    <td>Poitou-Charentes</td>
+                                    <td style="width: 5%"><input type="checkbox" v-model="poitouCharentesSelected"></td>
+                                </tr>
+                                <tr>
+                                    <td>Provence-Alpes-Côte d'Azur</td>
+                                    <td style="width: 5%"><input type="checkbox" v-model="pacaSelected"></td>
+                                </tr>
+                                <tr>
+                                    <td>Rhône-Alpes</td>
+                                    <td style="width: 5%"><input type="checkbox" v-model="rhoneAlpesSelected"></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -144,36 +227,7 @@
 <script src="https://unpkg.com/vue/dist/vue.js"></script>
 <script src="https://cdn.jsdelivr.net/lodash/4.17.3/lodash.min.js"></script>
 
-<script>
-    var citiesView = new Vue({
-        el: '#geo',
-        data: {
-            regionsTableVisible: true,
-            regionsTableVisibilityLabel: "Masquer",
-            regions: [
-                {name: "Ile de France"},
-                {name: "Bretagne"},
-                {name: "PACA"}
-            ],
-            departementsTableVisible: true,
-            departementsTableVisibilityLabel: "Masquer",
-            departements: [
-                {name: "Seine Saint Denis"},
-                {name: "Yonne"},
-                {name: "Paris"}
-            ]
-        },
-        computed: {
-            availableRegions: function () {
-                return this.regions;
-            },
-            availableDepartements: function () {
-                return this.departements;
-            }
-        }
-    });
-
-</script>
+<script src="/js/geo/regions.js"></script>
 
 </body>
 </html>
