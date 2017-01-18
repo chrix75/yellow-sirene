@@ -19,7 +19,7 @@ var Regions = function () {
         this.regions = [];
     }
 
-    Departement.prototype.select = function(selected) {
+    Departement.prototype.selectionChanged = function(selected) {
         this.selected = selected;
         _.each(this.regions, function (r) { r.updateFilteredState(); });
     };
@@ -34,22 +34,20 @@ var Regions = function () {
         this.departements.push(departement);
     };
 
-    Region.prototype.select = function (selected) {
-        this.selected = selected;
-
+    Region.prototype.selectionChanged = function () {
         if (this.pre2016Regions !== undefined) {
             // the current Region is a 2016 region
-            if (selected) {
+            if (this.selected) {
                 _.each(this.pre2016Regions, function (r) {
-                    r.select(true);
+                    r.selected = true;
                 });
             }
 
         } else if (this.region2016 !== undefined) {
             // the current Region is a pre-2016 region
 
-            if (!selected) {
-                this.region2016.select(false);
+            if (!this.selected) {
+                this.region2016.selected = false;
             }
         }
     };
@@ -264,7 +262,7 @@ var geoView = new Vue({
             }
         },
         toggleRegion: function (reg) {
-            reg.select(!reg.selected);
+            reg.selectionChanged();
         }
     }
 
